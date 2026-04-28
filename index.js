@@ -18,8 +18,8 @@ const INTERVAL_MS   = 10 * 60 * 1000; // 10 minutes
 
 // ── Hard Ranges (absolute limits values never exceed) ─────────────
 const HARD_LIMITS = {
-  frequency:   { min: 180,  max: 230  },
-  humidity:    { min: 40,   max: 49   },
+  frequency:   { min: 180,  max: 220  },
+  humidity:    { min: 40,   max: 44   },
   // Temperature limits are time-based — see getTemperatureRange()
 };
 
@@ -47,7 +47,7 @@ let sensorState = {
 function getTemperatureRange() {
   const hour = new Date().getHours(); // local server time
   if (hour >= 5 && hour < 18) {
-    return { min: 28, max: 35 };
+    return { min: 28, max: 31 };
   }
   return { min: 20, max: 27 };
 }
