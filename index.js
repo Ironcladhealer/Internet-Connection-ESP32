@@ -47,9 +47,9 @@ let sensorState = {
 function getTemperatureRange() {
   const hour = new Date().getHours(); // local server time
   if (hour >= 5 && hour < 18) {
-    return { min: 35, max: 37 };
+    return { min: 28, max: 35 };
   }
-  return { min: 25, max: 29 };
+  return { min: 20, max: 27 };
 }
 
 // ── Drift helper ──────────────────────────────────────────────────
